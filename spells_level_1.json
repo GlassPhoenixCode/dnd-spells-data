@@ -1,0 +1,669 @@
+[
+  {
+    "name": "Alarm",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 minute",
+    "range": "30 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A tiny bell and a piece of fine silver wire"
+    },
+    "duration": "8 hours",
+    "description": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range. Until the spell ends, an alarm alerts you if a creature enters the area. When you cast the spell, you can designate creatures that won't set off the alarm. When a creature enters the area, you and up to five creatures of your choice that you can see within 30 feet of you hear an audible alarm.",
+    "classes": ["Bard", "Cleric", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Animal Friendship",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A morsel of food"
+    },
+    "duration": "24 hours",
+    "description": "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must make a Wisdom saving throw. If the creature fails its saving throw, it is charmed by you for the duration. If you or your companions do anything harmful to it, the spell ends.",
+    "classes": ["Bard", "Druid", "Ranger"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Armor of Agathys",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "1 hour",
+    "description": "You surround yourself with a magical force that provides temporary hit points and damages attackers. You gain a number of temporary hit points equal to 5 + your spellcasting ability modifier. If a creature hits you with a melee attack while you have these temporary hit points, the creature takes 5 cold damage.",
+    "classes": ["Warlock"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Bless",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A sprinkling of holy water"
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.",
+    "classes": ["Cleric", "Paladin"],
+    "ritual": false,
+    "concentration": true
+  },
+  {
+    "name": "Burning Hands",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (15-foot cone)",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "Instantaneous",
+    "description": "As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much on a successful one.",
+    "classes": ["Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Charm Person",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "1 hour",
+    "description": "You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance.",
+    "classes": ["Bard", "Druid", "Sorcerer", "Warlock", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Chromatic Orb",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A diamond worth at least 50 gp"
+    },
+    "duration": "Instantaneous",
+    "description": "You hurl a 1-foot-diameter sphere of energy at a creature within range. Choose the type of energy: acid, cold, fire, lightning, poison, or thunder. Make a ranged spell attack. On a hit, the target takes 3d8 damage of the chosen type.",
+    "classes": ["Bard", "Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Color Spray",
+    "level": 1,
+    "school": "Illusion",
+    "casting_time": "1 action",
+    "range": "Self (15-foot cone)",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "Instantaneous",
+    "description": "A dazzling array of flashing, colored light springs from your hand. Each creature in a 15-foot cone must make a Constitution saving throw. On a failed save, the creature is blinded for the duration. Blinded creatures are incapacitated and have a speed of 0. The spell ends for a creature if it takes damage or someone uses an action to shake it out of its stupor.",
+    "classes": ["Bard", "Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Command",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "1 round",
+    "description": "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. The command must be a single word such as 'approach', 'drop', 'flee', 'grovel', or 'halt'. Some words might be more effective in certain situations.",
+    "classes": ["Bard", "Cleric", "Paladin", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Comprehend Languages",
+    "level": 1,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "1 hour",
+    "description": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language you see, but you must be touching the surface on which the words are written.",
+    "classes": ["Bard", "Cleric", "Druid", "Ranger", "Rogue", "Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Create or Destroy Water",
+    "level": 1,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A drop of water or a piece of ice"
+    },
+    "duration": "Instantaneous",
+    "description": "You either create or destroy water within range. Create: You create up to 10 gallons of clean water in an open container or as rain in a 30-foot cube. Destroy: You destroy up to 10 gallons of water in an open container or in a 30-foot cube.",
+    "classes": ["Cleric", "Druid"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Cure Wounds",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "Instantaneous",
+    "description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+    "classes": ["Bard", "Cleric", "Druid", "Paladin", "Ranger"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Detect Magic",
+    "level": 1,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "Concentration, up to 10 minutes",
+    "description": "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.",
+    "classes": ["Bard", "Cleric", "Druid", "Paladin", "Ranger", "Sorcerer", "Warlock", "Wizard"],
+    "ritual": false,
+    "concentration": true
+  },
+  {
+    "name": "Detect Poison and Disease",
+    "level": 1,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A tiny severed snake's head"
+    },
+    "duration": "Concentration, up to 10 minutes",
+    "description": "For the duration, you sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also learn whether each creature is diseased or poisoned.",
+    "classes": ["Cleric", "Druid"],
+    "ritual": false,
+    "concentration": true
+  },
+  {
+    "name": "Disguise Self",
+    "level": 1,
+    "school": "Illusion",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "1 hour",
+    "description": "You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs.",
+    "classes": ["Bard", "Sorcerer", "Warlock", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Entangle",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A small amount of fur or a piece of green plant"
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain. A creature moving through the area must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends.",
+    "classes": ["Druid", "Ranger"],
+    "ritual": false,
+    "concentration": true
+  },
+  {
+    "name": "False Life",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A small amount of alcohol or distilled water"
+    },
+    "duration": "1 hour",
+    "description": "Bolstering yourself with a necromantic facsimile of life, you gain temporary hit points. You gain 1d4 + your spellcasting ability modifier temporary hit points.",
+    "classes": ["Bard", "Sorcerer", "Warlock", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Feather Fall",
+    "level": 1,
+    "school": "Transmutation",
+    "casting_time": "1 reaction",
+    "range": "60 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "1 minute",
+    "description": "Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can't be knocked prone.",
+    "classes": ["Bard", "Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Find Familiar",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 hour",
+    "range": "10 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier"
+    },
+    "duration": "Instantaneous",
+    "description": "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, seahorse, spider, or weasel. Your familiar acts independently of you, but it always obeys your commands. It rolls its own initiative and acts on its own turn.",
+    "classes": ["Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Grease",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A bit of pork rind or butter"
+    },
+    "duration": "1 minute",
+    "description": "Slick grease covers a 10-foot square within range, making the area difficult terrain. When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall prone.",
+    "classes": ["Bard", "Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Healing Word",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 bonus action",
+    "range": "60 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "Instantaneous",
+    "description": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier.",
+    "classes": ["Bard", "Cleric", "Druid"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Identify",
+    "level": 1,
+    "school": "Divination",
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A pearl worth at least 100 gp and an owl feather"
+    },
+    "duration": "Instantaneous",
+    "description": "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it.",
+    "classes": ["Bard", "Cleric", "Wizard"],
+    "ritual": true,
+    "concentration": false
+  },
+  {
+    "name": "Illusory Script",
+    "level": 1,
+    "school": "Illusion",
+    "casting_time": "10 minutes",
+    "range": "Touch",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A lead-based ink worth at least 10 gp, which the spell consumes"
+    },
+    "duration": "10 days",
+    "description": "You write on parchment, paper, or some other suitable writing material and imbue it with a secret message. To outside observers, the writing appears normal, but the target can decipher the hidden message. You choose who can read the hidden message when you cast the spell.",
+    "classes": ["Wizard"],
+    "ritual": true,
+    "concentration": false
+  },
+  {
+    "name": "Jump",
+    "level": 1,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "1 minute",
+    "description": "You touch a creature. The target's jump distance is tripled until the spell ends.",
+    "classes": ["Bard", "Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Longstrider",
+    "level": 1,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "1 hour",
+    "description": "You touch a creature. The target's speed increases by 10 feet until the spell ends.",
+    "classes": ["Druid", "Ranger"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Purify Food and Drink",
+    "level": 1,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "10 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A sprinkle of holy water"
+    },
+    "duration": "Instantaneous",
+    "description": "All nonmagical food and drink within a 5-foot radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.",
+    "classes": ["Cleric", "Druid"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Ray of Sickness",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "Instantaneous",
+    "description": "A ray of sickening greenish energy lances toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes poison damage and must make a Constitution saving throw or be poisoned until the end of your next turn.",
+    "classes": ["Sorcerer", "Warlock", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Sanctuary",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 bonus action",
+    "range": "30 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "1 minute",
+    "description": "You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or harmful spell must first make a Wisdom saving throw. On a failed save, the attacker must choose a different target or lose the attack or spell.",
+    "classes": ["Cleric"],
+    "ritual": false,
+    "concentration": true
+  },
+  {
+    "name": "Shield of Faith",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 bonus action",
+    "range": "60 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A small parchment with a bit of holy text written on it"
+    },
+    "duration": "10 minutes",
+    "description": "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.",
+    "classes": ["Cleric", "Paladin"],
+    "ritual": false,
+    "concentration": true
+  },
+  {
+    "name": "Silent Image",
+    "level": 1,
+    "school": "Illusion",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You create the image of an object, a creature, or some other visible phenomenon within range that lasts for the duration. The image is purely visual; it isn't accompanied by sound, smell, or other sensory effects.",
+    "classes": ["Bard", "Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": true
+  },
+  {
+    "name": "Sleep",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A pinch of fine sand, rose petals, or a cricket"
+    },
+    "duration": "1 minute",
+    "description": "This spell sends creatures into a magical slumber. Roll 5d8; the total is the number of hit points of creatures that can be affected by this spell. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points.",
+    "classes": ["Bard", "Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Speak with Animals",
+    "level": 1,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A morsel of food"
+    },
+    "duration": "10 minutes",
+    "description": "You gain the ability to comprehend and verbally communicate with beasts for the duration. You can’t speak with creatures that are normally incapable of speech.",
+    "classes": ["Bard", "Druid", "Ranger"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Tasha's Hideous Laughter",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "You burst into laughter, which causes one creature of your choice within range that you can see to perceive everything as hilariously funny and fall into fits of laughter if it fails a Wisdom saving throw. A creature in fits of laughter is incapacitated and prone.",
+    "classes": ["Bard"],
+    "ritual": false,
+    "concentration": true
+  },
+  {
+    "name": "Tenser's Floating Disk",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A drop of mercury"
+    },
+    "duration": "1 hour",
+    "description": "You create a circular, horizontal plane of force that appears 3 feet above the ground within range. The disk is 3 feet in diameter and 1 inch thick, and it can hold up to 500 pounds. It remains for the duration or until you dismiss it as an action.",
+    "classes": ["Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Thunderwave",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (15-foot cube)",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": false,
+      "materials_needed": null
+    },
+    "duration": "Instantaneous",
+    "description": "A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes thunder damage and is pushed 10 feet away from you.",
+    "classes": ["Bard", "Sorcerer", "Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Unseen Servant",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 hour",
+    "range": "60 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A piece of string and a bit of wood"
+    },
+    "duration": "1 hour",
+    "description": "An invisible, mindless, shapeless force that performs simple tasks at your command. It can move objects, open doors, fetch things, clean, etc., but cannot attack or carry out complex tasks.",
+    "classes": ["Wizard"],
+    "ritual": false,
+    "concentration": false
+  },
+  {
+    "name": "Witch Bolt",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materials_needed": "A twig from a tree that has been struck by lightning"
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "A beam of crackling blue energy lances toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack. On a hit, the target takes lightning damage, and the spell continues to deal damage on subsequent turns as long as you maintain concentration.",
+    "classes": ["Warlock"],
+    "ritual": false,
+    "concentration": true
+  }
+  ]
+  
