@@ -563,7 +563,7 @@
     "description": "A crossbow with a built-in magazine for rapid-fire capability.",
     "imageUrl": ""
   },
-  {
+{
     "name": "Shortbow",
     "type": "Simple Ranged",
     "damage": "1d6",
@@ -573,7 +573,7 @@
     "properties": ["Ammunition", "Range (80/320)", "Two-Handed"],
     "proficientClasses": ["Ranger", "Rogue"],
     "description": "A bow that is easy to handle and effective at short ranges.",
-    "imageUrl": ""
+    "imageUrl": "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Shortbow.webp"
   },
   {
     "name": "Sling",
@@ -585,6 +585,7 @@
     "properties": ["Ammunition (30/120)"],
     "proficientClasses": ["Cleric", "Druid"],
     "description": "A simple ranged weapon that uses stones or bullets as ammunition.",
-    "imageUrl": ""
-  },
+    "imageUrl": "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Sling.webp"
+  }
+
 ]
