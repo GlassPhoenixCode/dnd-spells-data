@@ -430,7 +430,7 @@
     "proficientClasses": ["Fighter", "Rogue"],
     "description": "A flexible weapon that can strike at a distance.",
     "imageUrl": "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Whip.webp"
-  }
+  },
   {
     "name": "Yklwa",
     "type": "Simple Melee",
@@ -442,7 +442,7 @@
     "proficientClasses": ["Barbarian", "Fighter", "Ranger"],
     "description": "A traditional weapon from Chult, consisting of a wooden shaft with a steel or stone blade.",
     "imageUrl": "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Yklwa.webp"
-  }
+  },
    {
     "name": "Arbalest",
     "type": "Martial Ranged",
@@ -514,7 +514,7 @@
     "proficientClasses": ["Fighter", "Ranger"],
     "description": "Javelins tipped with alchemical explosives for added fire damage.",
     "imageUrl": ""
-  },
+   },
    {
     "name": "Hand Crossbow",
     "type": "Martial Ranged",
@@ -526,7 +526,7 @@
     "proficientClasses": ["Rogue", "Fighter"],
     "description": "A compact crossbow that can be wielded with one hand.",
     "imageUrl": ""
-  }
+  },
   {
     "name": "Heavy Crossbow",
     "type": "Martial Ranged",
@@ -574,7 +574,7 @@
     "proficientClasses": ["Ranger", "Rogue"],
     "description": "A bow that is easy to handle and effective at short ranges.",
     "imageUrl": ""
-  }
+  },
   {
     "name": "Sling",
     "type": "Simple Ranged",
@@ -587,5 +587,4 @@
     "description": "A simple ranged weapon that uses stones or bullets as ammunition.",
     "imageUrl": ""
   },
-
 ]
