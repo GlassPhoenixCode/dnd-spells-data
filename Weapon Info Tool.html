@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RPG Weapon Reference</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    color: #000000;
+     background-image: url("https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Weapons.webp");
+    margin: 0;
+    padding: 0;
+  }
+
+
+ header {
+  text-align: center;
+  background-image: url('https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Header%20image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color:#fffe0b;
+  -webkit-text-stroke: 1px red;
+  text-shadow: 1px 1px 0 red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red; /* Fallback for unsupported browsers */
+  padding: 10em;
+    margin: 3 auto;
+    max-width: 1200px;
+    max-height: 10px;
+}
+
+.filters {
+  background: linear-gradient(to bottom, #f4e7c3, #b18d5d);
+  margin-top: 0em;
+  padding: 2.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45em;
+  align-items: center;
+  height: 150px; /* Set a fixed height */
+  overflow-y: auto; /* Allow scrolling for overflow content */
+  align-content: center; /* Ensures content aligns within the limited height */
+  margin:1 auto;
+  border: 2px solid; 
+  border-color: #000;
+    max-width: 1200px;
+    max-height: 10px;
+}
+
+  .filters input[type="text"],
+  .filters select {
+    padding: 0.5em;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+
+  .filters button {
+    padding: 0.5em 1em;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: #eee;
+    cursor: pointer;
+  }
+
+  .filters button:hover {
+    background: #ddd;
+  }
+
+  .weapon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    margin: 2em;
+    color: #000
+    padding: 10em;
+    max-width: 1200px;
+    max-height: 10px;
+	 }
+
+  .weapon-card {
+    background:linear-gradient(to bottom, #f4e7c3, #b18d5d);
+    border: 3px solid #000;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    transition: background 3.s ease;
+  }
+  .weapon-card:hover {
+    background: #b69090;
+  }
+
+  .weapon-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+  }
+
+  .weapon-card p {
+    margin: 0.3em 0;
+    font-size: 0.9em;
+  }
+
+  /* Modal Styles */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,0.5);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+  }
+
+  .modal {
+    background:#ddd1b6;
+    padding:1em;
+    border-radius:10px;
+    max-width:400px;
+    width:90%;
+    position: relative;
+    border: solid black
+  }
+
+  .modal-close {
+    position:absolute;
+    top:0.5em;
+    right:0.5em;
+    background:none;
+    border:none;
+    font-size:1em;
+    cursor:pointer;
+  }
+
+  .modal h2 {
+    margin-top:0;
+    font-size:1.2em;
+  }
+
+  .modal img {
+    max-width:100%;
+    display:block;
+    margin:0.5em 0;
+  }
+
+  .no-results {
+    text-align:center;
+    margin-top:2em;
+    color:#555;
+  }
+
+  @media (max-width:600px) {
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Choose Your Weapons
+</header>
+
+<div class="filters">
+  <input type="text" id="searchTerm" placeholder="Search by name or description..." />
+  
+  <select id="filterType">
+    <option value="">All Types</option>
+    <option value="Simple Melee">Simple Melee</option>
+    <option value="Martial Melee">Martial Melee</option>
+    <option value="Simple Ranged">Simple Ranged</option>
+    <option value="Martial Ranged">Martial Ranged</option>
+  </select>
+
+  <select id="filterDamageType">
+    <option value="">All Damage Types</option>
+    <option value="Slashing">Slashing</option>
+    <option value="Piercing">Piercing</option>
+    <option value="Bludgeoning">Bludgeoning</option>
+  </select>
+
+  <select id="filterClass">
+    <option value="">All Classes</option>
+    <option value="Fighter">Fighter</option>
+    <option value="Ranger">Ranger</option>
+    <option value="Rogue">Rogue</option>
+    <option value="Paladin">Paladin</option>
+  </select>
+  
+  <button data-sort="cost">Sort by Cost</button>
+  <button data-sort="weight">Sort by Weight</button>
+</div>
+
+<div class="weapon-grid" id="weaponGrid"></div>
+
+<div class="no-results" id="noResults" style="display:none;">No results found.</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" id="weaponModal">
+    <button class="modal-close" id="modalClose">X</button>
+    <h2 id="modalName"></h2>
+    <img id="modalImage" alt="" />
+    <p><strong>Description:</strong> <span id="modalDescription"></span></p>
+    <p><strong>Type:</strong> <span id="modalType"></span></p>
+    <p><strong>Damage:</strong> <span id="modalDamage"></span> <span id="modalDamageType"></span></p>
+    <p><strong>Cost:</strong> <span id="modalCost"></span> gp</p>
+    <p><strong>Weight:</strong> <span id="modalWeight"></span> lb.</p>
+    <p><strong>Properties:</strong> <span id="modalProperties"></span></p>
+    <p><strong>Proficient Classes:</strong> <span id="modalClasses"></span></p>
+  </div>
+</div>
+
+<script>
+// Sample JSON data
+const weapons = [
+  {
+    name: "Battleaxe",
+    type: "Martial Melee",
+    damage: "1d8",
+    damageType: "Slashing",
+    cost: 10,
+    weight: 4,
+    properties: ["Versatile"],
+    proficientClasses: ["Fighter", "Paladin", "Ranger"],
+    description: "A versatile axe favored by many warriors.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/battle axe.webp"
+  },
+    {
+    name: "Bladed Gauntlet",
+    type: "Martial Melee",
+    damage: "1d8",
+    damageType: "Slashing",
+    cost: 15,
+    weight: 4,
+    properties: ["Light"],
+    proficientClasses: ["Rogue", "Fighter"],
+    description: "A metal glove with integrated blades for up-close combat.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/bladed gauntlet.webp"
+  },
+  {
+    name: "Cestus",
+    type: "Simple Melee",
+    damage: "1d4",
+    damageType: "Bludgeoning",
+    cost: 1,
+    weight: 1,
+    properties: ["Light"],
+    proficientClasses: ["Fighter", "Monk", "Rogue"],
+    description: "A leather glove reinforced with metal studs, ideal for unarmed combat.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Cestus.webp"
+  },
+   {
+    name: "Claymore",
+    type: "Martial Melee",
+    damage: "2d8",
+    damageType: "Slashing",
+    cost: 50,
+    weight: 8,
+    properties: ["Heavy", "Two-Handed"],
+    proficientClasses: ["Barbarian", "Fighter"],
+    description: "A heavy greatsword requiring immense strength to wield effectively.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Greatsword.webp"
+  },
+   {
+    name: "Club",
+    type: "Simple Melee",
+    damage: "1d4",
+    damageType: "Bludgeoning",
+    cost: 0.1,
+    weight: 2,
+    properties: ["Light"],
+    proficientClasses: ["Barbarian", "Druid", "Fighter", "Ranger"],
+    description: "A simple, heavy stick used as a weapon.",
+    imageUrl: ""
+  },
+  {
+    name: "Dagger",
+    type: "Simple Melee",
+    damage: "1d4",
+    damageType: "Piercing",
+    cost: 2,
+    weight: 1,
+    properties: ["Finesse", "Light", "Thrown (20/60)"],
+    proficientClasses: ["Bard", "Cleric", "Druid", "Ranger", "Artificer", "Wizard"],
+    description: "A small, easily concealed blade.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Dagger.webp"
+  },
+  {
+    name: "Greatsword",
+    type: "Martial Melee",
+    damage: "2d6",
+    damageType: "Slashing",
+    cost: 50,
+    weight: 6,
+    properties: ["Heavy", "Two-Handed"],
+    proficientClasses: ["Fighter", "Paladin", "Ranger"],
+    description: "A large sword that deals significant damage.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Greatsword.webp"
+  },
+   {
+    name: "Halberd",
+    type: "Martial Melee",
+    damage: "1d10",
+    damageType: "Slashing",
+    cost: 20,
+    weight: 6,
+    properties: ["Heavy", "Reach", "Two-Handed"],
+    proficientClasses: ["Fighter", "Paladin"],
+    description: "A versatile polearm with a blade for slashing.",
+    imageUrl: ""
+  },
+  {
+    name: "Handaxe",
+    type: "Simple Melee",
+    damage: "1d6",
+    damageType: "Slashing",
+    cost: 5,
+    weight: 2,
+    properties: ["Light", "Thrown (20/60)"],
+    proficientClasses: ["Barbarian", "Fighter", "Paladin", "Ranger"],
+    description: "A versatile axe that can be thrown in combat.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Handaxe.webp"
+  },
+    {
+    name: "Javelin",
+    type: "Simple Melee",
+    damage: "1d6",
+    damageType: "Piercing",
+    cost: 0.5,
+    weight: 2,
+    properties: ["Thrown (30/120)"],
+    proficientClasses: ["Barbarian", "Fighter", "Paladin", "Ranger"],
+    description: "A lightweight spear designed for throwing.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/javelin.webp"
+  },
+     {
+    name: "Katana",
+    type: "Martial Melee",
+    damage: "1d8",
+    damageType: "Slashing",
+    cost: 15,
+    weight: 3,
+    properties: ["Versatile (1d10)", "Finesse"],
+    proficientClasses: ["Fighter", "Rogue"],
+    description: "A sleek, curved sword with a balance of finesse and power.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Katana.webp"
+  },
+  {
+    name: "Kukri",
+    type: "Simple Melee",
+    damage: "1d6",
+    damageType: "Slashing",
+    cost: 6,
+    weight: 2,
+    properties: ["Light", "Finesse"],
+    proficientClasses: ["Ranger", "Rogue"],
+    description: "A curved blade with a heavy profile, effective for close combat.",
+    imageUrl:  "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/ Kukri,.webp"
+  },
+  {
+    name: "Longsword",
+    type: "Martial Melee",
+    damage: "1d8",
+    damageType: "Slashing",
+    cost: 15,
+    weight: 3,
+    properties: ["Versatile"],
+    proficientClasses: ["Fighter", "Paladin", "Ranger"],
+    description: "A versatile weapon favored by many warriors.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Longsword.webp"
+  },
+  {
+    name: "Mace",
+    type: "Simple Melee",
+    damage: "1d6",
+    damageType: "Bludgeoning",
+    cost: 5,
+    weight: 4,
+    properties: [],
+    proficientClasses: ["Cleric", "Fighter", "Paladin"],
+    description: "A blunt weapon designed for crushing blows.",
+    imageUrl: ""
+  },
+    {
+    name: "Morningstar",
+    type: "Martial Melee",
+    damage: "1d8",
+    damageType: "Piercing",
+    cost: 15,
+    weight: 4,
+    properties: [],
+    proficientClasses: ["Fighter", "Paladin"],
+    description: "A spiked weapon designed to pierce armor.",
+    imageUrl: ""
+	},  
+  {
+    name: "Maul",
+    type: "Martial Melee",
+    damage: "2d6",
+    damageType: "Bludgeoning",
+    cost: 10,
+    weight: 10,
+    properties: ["Heavy", "Two-Handed"],
+    proficientClasses: ["Barbarian", "Fighter"],
+    description: "A massive hammer designed for crushing force.",
+    imageUrl: ""
+  },
+   {
+    name: "Meteor Hammer",
+    type: "Martial Melee",
+    damage: "1d10",
+    damageType: "Bludgeoning",
+    cost: 10,
+    weight: 6,
+    properties: ["Reach", "Heavy", "Two-Handed"],
+    proficientClasses: ["Monk", "Fighter"],
+    description: "A long chain with weighted ends for spinning, crushing attacks.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Meteor Hammer.webp"
+  },
+  {
+    name: "Nodachi",
+    type: "Martial Melee",
+    damage: "2d6",
+    damageType: "Slashing",
+    cost: 25,
+    weight: 6,
+    properties: ["Heavy", "Reach", "Two-Handed"],
+    proficientClasses: ["Fighter", "Barbarian"],
+    description: "A long, two-handed katana with extended reach.",
+    imageUrl: ""
+  },
+   {
+    name: "Pike",
+    type: "Martial Melee",
+    damage: "1d10",
+    damageType: "Piercing",
+    cost: 5,
+    weight: 18,
+    properties: ["Heavy", "Reach", "Two-Handed"],
+    proficientClasses: ["Fighter", "Paladin"],
+    description: "A long polearm designed for thrusting attacks.",
+    imageUrl: ""
+  },
+  {
+    name: "Quarterstaff",
+    type: "Simple Melee",
+    damage: "1d6",
+    damageType: "Bludgeoning",
+    cost: 2,
+    weight: 4,
+    properties: ["Versatile"],
+    proficientClasses: ["Cleric", "Druid", "Monk", "Sorcerer", "Wizard"],
+    description: "A sturdy staff used for both combat and support.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Quarterstaff.webp"
+  },
+  {
+    name: "Rapier",
+    type: "Martial Melee",
+    damage: "1d8",
+    damageType: "Piercing",
+    cost: 25,
+    weight: 2,
+    properties: ["Finesse"],
+    proficientClasses: ["Fighter", "Rogue"],
+    description: "A slender, sharply pointed sword favored by duelists.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Rapier.webp"
+  },
+  {
+    name: "Scimitar",
+    type: "Martial Melee",
+    damage: "1d6",
+    damageType: "Slashing",
+    cost: 25,
+    weight: 3,
+    properties: ["Finesse", "Light"],
+    proficientClasses: ["Fighter", "Rogue"],
+    description: "A curved sword that is light and easy to handle.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/scimitar.webp"
+  },
+  {
+    name: "Shortsword",
+    type: "Martial Melee",
+    damage: "1d6",
+    damageType: "Piercing",
+    cost: 10,
+    weight: 2,
+    properties: ["Finesse", "Light"],
+    proficientClasses: ["Fighter", "Rogue"],
+    description: "A light and easily concealed weapon favored by rogues.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/shortsword.webp"
+  },
+  {
+    name: "Spear",
+    type: "Simple Melee",
+    damage: "1d6",
+    damageType: "Piercing",
+    cost: 1,
+    weight: 3,
+    properties: ["Thrown", "Versatile"],
+    proficientClasses: ["Cleric", "Fighter", "Paladin", "Ranger"],
+    description: "A simple weapon that can be used for both melee and ranged attacks.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Spear.webp"
+  },
+  {
+    name: "Trident",
+    type: "Martial Melee",
+    damage: "1d6",
+    damageType: "Piercing",
+    cost: 5,
+    weight: 4,
+    properties: ["Thrown", "Versatile"],
+    proficientClasses: ["Cleric", "Fighter", "Paladin", "Ranger"],
+    description: "A three-pronged spear used for both melee and ranged combat.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Trident.webp"
+  },
+  {
+    name: "Warhammer",
+    type: "Martial Melee",
+    damage: "1d8",
+    damageType: "Bludgeoning",
+    cost: 15,
+    weight: 2,
+    properties: ["Versatile"],
+    proficientClasses: ["Cleric", "Fighter", "Paladin"],
+    description: "A sturdy hammer used for both combat and construction.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/War Hammer.webp"
+  },
+  {
+    name: "Whip",
+    type: "Martial Melee",
+    damage: "1d4",
+    damageType: "Slashing",
+    cost: 2,
+    weight: 3,
+    properties: ["Finesse", "Reach"],
+    proficientClasses: ["Rogue", "Monk"],
+    description: "A flexible weapon that can be used to strike foes from a distance.",
+    imageUrl: "https://raw.githubusercontent.com/GlassPhoenixCode/dnd-spells-data/main/Whip.webp"
+  },
+ 
+  {
+    name: "Sai",
+    type: "Martial Melee",
+    damage: "1d6",
+    damageType: "Piercing",
+    cost: 10,
+    weight: 2,
+    properties: ["Light", "Finesse"],
+    proficientClasses: ["Monk", "Rogue"],
+    description: "A short, pronged weapon used for trapping and disarming opponents.",
+    imageUrl: ""
+  },
+  {
+    name: "Sickle, Double-Bladed",
+    type: "Martial Melee",
+    damage: "1d8",
+    damageType: "Slashing",
+    cost: 10,
+    weight: 4,
+    properties: ["Two-Handed"],
+    proficientClasses: ["Monk", "Fighter"],
+    description: "A double-ended sickle for spinning, slashing attacks.",
+    imageUrl: ""
+  },
+  {
+    name: "Tonfa",
+    type: "Simple Melee",
+    damage: "1d6",
+    damageType: "Bludgeoning",
+    cost: 4,
+    weight: 2,
+    properties: ["Light"],
+    proficientClasses: ["Monk", "Rogue"],
+    description: "A club with a perpendicular handle for advanced striking techniques.",
+    imageUrl: ""
+  },
+  {
+    name: "Arbalest",
+    type: "Martial Ranged",
+    damage: "2d10",
+    damageType: "Piercing",
+    cost: 250,
+    weight: 18,
+    properties: ["Heavy", "Two-Handed"],
+    proficientClasses: ["Fighter", "Ranger"],
+    description: "A large, crank-powered crossbow capable of devastating damage.",
+    imageUrl: ""
+  },
+    {
+    name: "Blowgun, Large",
+    type: "Simple Ranged",
+    damage: "1d6",
+    damageType: "Piercing",
+    cost: 5,
+    weight: 1,
+    properties: ["Ammunition"],
+    proficientClasses: ["Rogue", "Monk"],
+    description: "A larger blowgun capable of delivering more powerful projectiles.",
+    imageUrl: ""
+  },
+   {
+    name: "Chakram",
+    type: "Martial Ranged",
+    damage: "1d8",
+    damageType: "Slashing",
+    cost: 10,
+    weight: 1,
+    properties: ["Thrown (30/60)"],
+    proficientClasses: ["Fighter", "Rogue"],
+    description: "A circular, bladed throwing weapon, effective for ranged combat.",
+    imageUrl: ""
+  },
+  {
+    name: "Fire Lance",
+    type: "Martial Ranged",
+    damage: "1d12",
+    damageType: "Fire",
+    cost: 200,
+    weight: 10,
+    properties: ["Ammunition (5)", "Loading", "Two-Handed"],
+    proficientClasses: ["Fighter", "Artificer"],
+    description: "A polearm modified to fire alchemical charges at enemies.",
+    imageUrl: ""
+  },
+  {
+    name: "Explosive Javelins",
+    type: "Martial Ranged",
+    damage: "1d6",
+    damageType: "Piercing",
+    cost: 50,
+    weight: 3,
+    properties: ["Thrown (30/60)"],
+    proficientClasses: ["Fighter", "Ranger"],
+    description: "Javelins tipped with alchemical explosives for added fire damage.",
+    imageUrl: ""
+  },
+   {
+    name: "Heavy Crossbow",
+    type: "Martial Ranged",
+    damage: "1d10",
+    damageType: "Piercing",
+    cost: 50,
+    weight: 18,
+    properties: ["Ammunition", "Heavy", "Loading", "Two-Handed"],
+    proficientClasses: ["Fighter", "Ranger"],
+    description: "A powerful ranged weapon that deals significant damage.",
+    imageUrl: ""
+  },
+  {
+    name: "Light Crossbow",
+    type: "Simple Ranged",
+    damage: "1d8",
+    damageType: "Piercing",
+    cost: 25,
+    weight: 5,
+    properties: ["Ammunition", "Loading", "Two-Handed"],
+    proficientClasses: ["Bard", "Cleric", "Rogue", "Wizard"],
+    description: "A compact crossbow suited for quick strikes.",
+    imageUrl: ""
+  },
+    {
+    name: "Repeating Crossbow",
+    type: "Martial Ranged",
+    damage: "1d8",
+    damageType: "Piercing",
+    cost: 150,
+    weight: 12,
+    properties: ["Ammunition", "Loading (Ignored)", "Two-Handed"],
+    proficientClasses: ["Fighter", "Ranger"],
+    description: "A crossbow with a built-in magazine for rapid-fire capability.",
+    imageUrl: ""
+  },
+   {
+    name: "Shortbow",
+    type: "Simple Ranged",
+    damage: "1d6",
+    damageType: "Piercing",
+    cost: 25,
+    weight: 2,
+    properties: ["Ammunition", "Range (80/320)", "Two-Handed"],
+    proficientClasses: ["Ranger", "Rogue"],
+    description: "A bow that is easy to handle and effective at short ranges.",
+    imageUrl: ""
+  },
+];
+
+
+let currentSort = null; // store sort criteria
+let currentWeapons = [...weapons];
+
+const searchTermEl = document.getElementById('searchTerm');
+const filterTypeEl = document.getElementById('filterType');
+const filterDamageTypeEl = document.getElementById('filterDamageType');
+const filterClassEl = document.getElementById('filterClass');
+const weaponGridEl = document.getElementById('weaponGrid');
+const noResultsEl = document.getElementById('noResults');
+const modalBackdrop = document.getElementById('modalBackdrop');
+const modalClose = document.getElementById('modalClose');
+const modalName = document.getElementById('modalName');
+const modalImage = document.getElementById('modalImage');
+const modalDescription = document.getElementById('modalDescription');
+const modalType = document.getElementById('modalType');
+const modalDamage = document.getElementById('modalDamage');
+const modalDamageType = document.getElementById('modalDamageType');
+const modalCost = document.getElementById('modalCost');
+const modalWeight = document.getElementById('modalWeight');
+const modalProperties = document.getElementById('modalProperties');
+const modalClasses = document.getElementById('modalClasses');
+
+// Event Listeners
+searchTermEl.addEventListener('input', updateDisplay);
+filterTypeEl.addEventListener('change', updateDisplay);
+filterDamageTypeEl.addEventListener('change', updateDisplay);
+filterClassEl.addEventListener('change', updateDisplay);
+
+document.querySelectorAll('[data-sort]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.getAttribute('data-sort');
+    toggleSort(key);
+    updateDisplay();
+  });
+});
+
+modalClose.addEventListener('click', closeModal);
+modalBackdrop.addEventListener('click', (e) => {
+  if (e.target === modalBackdrop) closeModal();
+});
+
+function closeModal(){
+  modalBackdrop.style.display = 'none';
+}
+
+// Sorting function to allow multi-criteria if needed
+function multiSort(arr, criteria) {
+  return [...arr].sort((a,b) => {
+    for (let c of criteria) {
+      const {key, direction} = c;
+      if (a[key] < b[key]) return direction === 'asc' ? -1 : 1;
+      if (a[key] > b[key]) return direction === 'asc' ? 1 : -1;
+    }
+    return 0;
+  });
+}
+
+// Toggle sort direction
+function toggleSort(key) {
+  if(!currentSort) {
+    currentSort = [{key, direction:'asc'}];
+  } else {
+    let found = currentSort.find(c => c.key === key);
+    if(found) {
+      found.direction = found.direction === 'asc' ? 'desc' : 'asc';
+    } else {
+      currentSort = [{key, direction:'asc'}];
+    }
+  }
+}
+
+// Apply filters and search
+function filterWeapons() {
+  const searchValue = searchTermEl.value.toLowerCase().trim();
+  const typeValue = filterTypeEl.value;
+  const damageTypeValue = filterDamageTypeEl.value;
+  const classValue = filterClassEl.value;
+
+  let result = [...weapons];
+
+  // Search
+  if (searchValue) {
+    result = result.filter(w => 
+      w.name.toLowerCase().includes(searchValue) ||
+      (w.description && w.description.toLowerCase().includes(searchValue))
+    );
+  }
+
+  // Type filter
+  if (typeValue) {
+    result = result.filter(w => w.type === typeValue);
+  }
+
+  // Damage type filter
+  if (damageTypeValue) {
+    result = result.filter(w => w.damageType === damageTypeValue);
+  }
+
+  // Class filter
+  if (classValue) {
+    result = result.filter(w => w.proficientClasses.includes(classValue));
+  }
+
+  // Sort
+  if (currentSort && currentSort.length > 0) {
+    result = multiSort(result, currentSort);
+  }
+
+  return result;
+}
+
+function updateDisplay() {
+  currentWeapons = filterWeapons();
+  weaponGridEl.innerHTML = '';
+
+  if(currentWeapons.length === 0) {
+    noResultsEl.style.display = 'block';
+    return;
+  } else {
+    noResultsEl.style.display = 'none';
+  }
+
+  currentWeapons.forEach(w => {
+    const card = document.createElement('div');
+    card.className = 'weapon-card';
+    card.innerHTML = `
+      <h3>${w.name}</h3>
+      <p>Type: ${w.type}</p>
+      <p>Damage: ${w.damage} ${w.damageType}</p>
+      <p>Cost: ${w.cost} gp</p>
+      <p>Weight: ${w.weight} lb.</p>
+      <p>Properties: ${w.properties.join(', ')}</p>
+      <p>Classes: ${w.proficientClasses.join(', ')}</p>
+    `;
+    card.addEventListener('click', () => openModal(w));
+    weaponGridEl.appendChild(card);
+  });
+}
+
+function openModal(weapon) {
+  modalName.textContent = weapon.name;
+  modalImage.src = weapon.imageUrl || '';
+  modalImage.style.display = weapon.imageUrl ? 'block' : 'none';
+  modalDescription.textContent = weapon.description;
+  modalType.textContent = weapon.type;
+  modalDamage.textContent = weapon.damage;
+  modalDamageType.textContent = weapon.damageType;
+  modalCost.textContent = weapon.cost;
+  modalWeight.textContent = weapon.weight;
+  modalProperties.textContent = weapon.properties.join(', ');
+  modalClasses.textContent = weapon.proficientClasses.join(', ');
+
+  modalBackdrop.style.display = 'flex';
+}
+
+// Initial display
+updateDisplay();
+</script>
+</body>
+</html>

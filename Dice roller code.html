@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dice Roller</title>
+<style>
+  :root {
+    --border-color: #5e412f;
+    --text-color: #2c1900;
+    --accent-bg: rgba(255, 255, 255, 0.9);
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fefaf0;
+  }
+
+  .dice-roller-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dice-roller-container {
+    background: var(--accent-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+
+  button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--text-color);
+    color: #fff;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background: #2c1900;
+  }
+
+  select, input {
+    padding: 5px;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .roll-history {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .roll-entry {
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="top-toolbar">
+  <button class="dice-roller-button">Dice Roller</button>
+</div>
+
+<!-- Dice Roller Overlay -->
+<div class="dice-roller-overlay">
+  <div class="dice-roller-container">
+    <h3>Dice Roller</h3>
+    <label for="dice-type">Dice Type</label>
+    <select id="dice-type">
+      <option value="d4">d4</option>
+      <option value="d6">d6</option>
+      <option value="d8">d8</option>
+      <option value="d10">d10</option>
+      <option value="d12">d12</option>
+      <option value="d20">d20</option>
+      <option value="d100">d100</option>
+    </select>
+    <br><br>
+    <label for="dice-count">Number of Dice</label>
+    <input type="number" id="dice-count" value="1" min="1" style="text-align: center;">
+    <br><br>
+    <label for="modifier">Modifier</label>
+    <input type="number" id="modifier" value="0" style="text-align: center;">
+    <br><br>
+    <button id="roll-dice">Roll</button>
+    <button id="adv-disadv-roll">Adv/Disadv Roll</button>
+    <p id="dice-result">Result: --</p>
+    <div class="roll-history" id="roll-history"></div>
+  </div>
+</div>
+
+<script>
+  // Dice Roller Logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const diceRollerButton = document.querySelector('.dice-roller-button');
+    const diceRollerOverlay = document.querySelector('.dice-roller-overlay');
+    const diceTypeSelect = document.getElementById('dice-type');
+    const diceCountInput = document.getElementById('dice-count');
+    const modifierInput = document.getElementById('modifier');
+    const rollButton = document.getElementById('roll-dice');
+    const advDisadvButton = document.getElementById('adv-disadv-roll');
+    const resultDisplay = document.getElementById('dice-result');
+    const rollHistory = document.getElementById('roll-history');
+
+    // Show dice roller overlay
+    diceRollerButton.addEventListener('click', () => {
+      diceRollerOverlay.style.display = 'flex';
+    });
+
+    // Roll the dice and display result
+    rollButton.addEventListener('click', () => {
+      const diceType = parseInt(diceTypeSelect.value.replace('d', ''));
+      const diceCount = parseInt(diceCountInput.value);
+      const modifier = parseInt(modifierInput.value);
+      let total = 0;
+      let criticalHit = false;
+      let criticalFail = false;
+
+      for (let i = 0; i < diceCount; i++) {
+        const roll = Math.floor(Math.random() * diceType) + 1;
+        total += roll;
+        if (diceType === 20) {
+          if (roll === 20) criticalHit = true;
+          if (roll === 1) criticalFail = true;
+        }
+      }
+      total += modifier;
+      let resultMessage = `Result: ${total}`;
+      if (criticalHit) {
+        resultMessage += " (Critical Success! The gods smile upon you!)";
+      } else if (criticalFail) {
+        resultMessage += " (Critical Fail! A hilarious misstep occurs!)";
+      }
+      resultDisplay.textContent = resultMessage;
+      const historyEntry = document.createElement('div');
+      historyEntry.className = 'roll-entry';
+      historyEntry.textContent = resultMessage;
+      rollHistory.appendChild(historyEntry);
+
+      // Limit roll history to 10 entries
+      while (rollHistory.children.length > 10) {
+        rollHistory.removeChild(rollHistory.firstChild);
+      }
+    });
+
+    // Advantage/Disadvantage Roll Logic
+    advDisadvButton.addEventListener('click', () => {
+      const diceType = parseInt(diceTypeSelect.value.replace('d', ''));
+      const modifier = parseInt(modifierInput.value);
+
+      const roll1 = Math.floor(Math.random() * diceType) + 1;
+      const roll2 = Math.floor(Math.random() * diceType) + 1;
+      const total1 = roll1 + modifier;
+      const total2 = roll2 + modifier;
+      const resultMessage = `Result: ${total1} , ${total2}`;
+
+      resultDisplay.textContent = resultMessage;
+      const historyEntry = document.createElement('div');
+      historyEntry.className = 'roll-entry';
+      historyEntry.textContent = resultMessage;
+      rollHistory.appendChild(historyEntry);
+
+      // Limit roll history to 10 entries
+      while (rollHistory.children.length > 10) {
+        rollHistory.removeChild(rollHistory.firstChild);
+      }
+    });
+
+    // Close overlay on click outside container
+    diceRollerOverlay.addEventListener('click', (event) => {
+      if (event.target === diceRollerOverlay) {
+        diceRollerOverlay.style.display = 'none';
+      }
+    });
+  });
+</script>
+</body>
+</html>
