@@ -1,5 +1,5 @@
 [
- {
+    {
         "item": "Padded",
         "cost": "5 gp",
         "weight": "8 lb",
@@ -292,302 +292,302 @@
         "cost": "1 gp",
         "weight": "3 lb",
         "category": "Martial Ranged Weapon"
-    }
+    },
     {
-    "item": "wheat, 1 pound",
-    "cost": "1 cp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "flour, 1 pound",
-    "cost": "2 cp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "chicken",
-    "cost": "2 cp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "salt, 1 pound",
-    "cost": "5 cp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "iron, 1 pound",
-    "cost": "1 sp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "canvas, 1 sq yard",
-    "cost": "1 sp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "copper, 1 pound",
-    "cost": "5 sp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "cotton cloth, 1 sq yard",
-    "cost": "5 sp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "ginger, 1 pound",
-    "cost": "1 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "goat",
-    "cost": "1 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "cinnamon or pepper, 1 pound",
-    "cost": "2 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "sheep",
-    "cost": "2 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "cloves, 1 pound",
-    "cost": "3 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "pig",
-    "cost": "3 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "silver, 1 pound",
-    "cost": "5 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "linen, 1 sq yard",
-    "cost": "5 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "silk, 1 sq yard",
-    "cost": "10 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "cow",
-    "cost": "10 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "saffron, 1 pound",
-    "cost": "15 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "ox",
-    "cost": "15 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "gold, 1 pound",
-    "cost": "50 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "platinum, 1 pound",
-    "cost": "500 gp",
-    "weight": "-",
-    "category": "Trade Goods"
-  },
-  {
-    "item": "Ale, 1 gallon",
-    "cost": "2 sp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Ale, mug",
-    "cost": "4 cp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Banquet (per person)",
-    "cost": "10 gp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Bread, loaf",
-    "cost": "2 cp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Cheese, hunk",
-    "cost": "1 sp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Inn stay - Squalid",
-    "cost": "7 cp",
-    "weight": "-",
-    "category": "Lodging"
-  },
-  {
-    "item": "Inn stay - Poor",
-    "cost": "1 sp",
-    "weight": "-",
-    "category": "Lodging"
-  },
-  {
-    "item": "Inn stay - Modest",
-    "cost": "5 sp",
-    "weight": "-",
-    "category": "Lodging"
-  },
-  {
-    "item": "Inn stay - Comfortable",
-    "cost": "8 sp",
-    "weight": "-",
-    "category": "Lodging"
-  },
-  {
-    "item": "Inn stay - Wealthy",
-    "cost": "2 gp",
-    "weight": "-",
-    "category": "Lodging"
-  },
-  {
-    "item": "Inn stay - Aristocratic",
-    "cost": "4 gp",
-    "weight": "-",
-    "category": "Lodging"
-  },
-  {
-    "item": "Meals - Squalid",
-    "cost": "3 cp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Meals - Poor",
-    "cost": "6 cp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Meals - Modest",
-    "cost": "3 sp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Meals - Comfortable",
-    "cost": "5 sp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Meals - Wealthy",
-    "cost": "8 sp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Meals - Aristocratic",
-    "cost": "2 gp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Meat, chunk",
-    "cost": "3 sp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Wine, pitcher",
-    "cost": "2 sp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Wine, fine, bottle",
-    "cost": "10 gp",
-    "weight": "-",
-    "category": "Food and Drink"
-  },
-  {
-    "item": "Coach cab - Between towns (per mile)",
-    "cost": "3 cp",
-    "weight": "-",
-    "category": "Services"
-  },
-  {
-    "item": "Coach cab - Within a city",
-    "cost": "1 cp",
-    "weight": "-",
-    "category": "Services"
-  },
-  {
-    "item": "Hireling - Skilled (per day)",
-    "cost": "2 gp",
-    "weight": "-",
-    "category": "Services"
-  },
-  {
-    "item": "Hireling - Untrained (per day)",
-    "cost": "2 sp",
-    "weight": "-",
-    "category": "Services"
-  },
-  {
-    "item": "Messenger (per mile)",
-    "cost": "2 cp",
-    "weight": "-",
-    "category": "Services"
-  },
-  {
-    "item": "Road or gate toll",
-    "cost": "1 cp",
-    "weight": "-",
-    "category": "Services"
-  },
-  {
-    "item": "Ship's passage (per mile)",
-    "cost": "1 sp",
-    "weight": "-",
-    "category": "Services"
-  }
-  {
+        "item": "wheat, 1 pound",
+        "cost": "1 cp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "flour, 1 pound",
+        "cost": "2 cp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "chicken",
+        "cost": "2 cp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "salt, 1 pound",
+        "cost": "5 cp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "iron, 1 pound",
+        "cost": "1 sp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "canvas, 1 sq yard",
+        "cost": "1 sp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "copper, 1 pound",
+        "cost": "5 sp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "cotton cloth, 1 sq yard",
+        "cost": "5 sp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "ginger, 1 pound",
+        "cost": "1 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "goat",
+        "cost": "1 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "cinnamon or pepper, 1 pound",
+        "cost": "2 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "sheep",
+        "cost": "2 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "cloves, 1 pound",
+        "cost": "3 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "pig",
+        "cost": "3 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "silver, 1 pound",
+        "cost": "5 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "linen, 1 sq yard",
+        "cost": "5 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "silk, 1 sq yard",
+        "cost": "10 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "cow",
+        "cost": "10 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "saffron, 1 pound",
+        "cost": "15 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "ox",
+        "cost": "15 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "gold, 1 pound",
+        "cost": "50 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "platinum, 1 pound",
+        "cost": "500 gp",
+        "weight": "-",
+        "category": "Trade Goods"
+    },
+    {
+        "item": "Ale, 1 gallon",
+        "cost": "2 sp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Ale, mug",
+        "cost": "4 cp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Banquet (per person)",
+        "cost": "10 gp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Bread, loaf",
+        "cost": "2 cp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Cheese, hunk",
+        "cost": "1 sp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Inn stay - Squalid",
+        "cost": "7 cp",
+        "weight": "-",
+        "category": "Lodging"
+    },
+    {
+        "item": "Inn stay - Poor",
+        "cost": "1 sp",
+        "weight": "-",
+        "category": "Lodging"
+    },
+    {
+        "item": "Inn stay - Modest",
+        "cost": "5 sp",
+        "weight": "-",
+        "category": "Lodging"
+    },
+    {
+        "item": "Inn stay - Comfortable",
+        "cost": "8 sp",
+        "weight": "-",
+        "category": "Lodging"
+    },
+    {
+        "item": "Inn stay - Wealthy",
+        "cost": "2 gp",
+        "weight": "-",
+        "category": "Lodging"
+    },
+    {
+        "item": "Inn stay - Aristocratic",
+        "cost": "4 gp",
+        "weight": "-",
+        "category": "Lodging"
+    },
+    {
+        "item": "Meals - Squalid",
+        "cost": "3 cp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Meals - Poor",
+        "cost": "6 cp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Meals - Modest",
+        "cost": "3 sp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Meals - Comfortable",
+        "cost": "5 sp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Meals - Wealthy",
+        "cost": "8 sp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Meals - Aristocratic",
+        "cost": "2 gp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Meat, chunk",
+        "cost": "3 sp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Wine, pitcher",
+        "cost": "2 sp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Wine, fine, bottle",
+        "cost": "10 gp",
+        "weight": "-",
+        "category": "Food and Drink"
+    },
+    {
+        "item": "Coach cab - Between towns (per mile)",
+        "cost": "3 cp",
+        "weight": "-",
+        "category": "Services"
+    },
+    {
+        "item": "Coach cab - Within a city",
+        "cost": "1 cp",
+        "weight": "-",
+        "category": "Services"
+    },
+    {
+        "item": "Hireling - Skilled (per day)",
+        "cost": "2 gp",
+        "weight": "-",
+        "category": "Services"
+    },
+    {
+        "item": "Hireling - Untrained (per day)",
+        "cost": "2 sp",
+        "weight": "-",
+        "category": "Services"
+    },
+    {
+        "item": "Messenger (per mile)",
+        "cost": "2 cp",
+        "weight": "-",
+        "category": "Services"
+    },
+    {
+        "item": "Road or gate toll",
+        "cost": "1 cp",
+        "weight": "-",
+        "category": "Services"
+    },
+    {
+        "item": "Ship's passage (per mile)",
+        "cost": "1 sp",
+        "weight": "-",
+        "category": "Services"
+    },
+    {
         "item": "Camel",
         "cost": "50 gp",
         "weight": "-",
@@ -700,8 +700,8 @@
         "cost": "25000 gp",
         "weight": "-",
         "category": "Waterborne Vehicle"
-    }
-     {
+    },
+    {
         "item": "Alchemist's supplies",
         "cost": "50 gp",
         "weight": "8 lb",
@@ -922,8 +922,8 @@
         "cost": "25 gp",
         "weight": "1 lb",
         "category": "Tool"
-    }
-     {
+    },
+    {
         "item": "Abacus",
         "cost": "2 gp",
         "weight": "2 lb",
