@@ -1,0 +1,760 @@
+[
+  {
+    "name": "Battleaxe",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Axe",
+    "damage": {
+      "dice": "1d8",
+      "damage_type": "Slashing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Versatile"
+    ],
+    "weight": "4 lbs",
+    "cost": "10 gp",
+    "description": "A versatile axe favored by many warriors.",
+    "proficient_classes": [
+      "Fighter",
+      "Paladin",
+      "Ranger"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Flex",
+    "mastery_description": "Can be used one-handed or two-handed for extra damage."
+  },
+  {
+    "name": "Dagger",
+    "type": "Simple",
+    "category": "Weapon",
+    "weapon_type": "Knife",
+    "damage": {
+      "dice": "1d4",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "20 feet",
+      "long": "60 feet"
+    },
+    "properties": [
+      "Finesse",
+      "Light",
+      "Thrown"
+    ],
+    "weight": "1 lb",
+    "cost": "2 gp",
+    "description": "A small, easily concealed blade.",
+    "proficient_classes": [
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Ranger",
+      "Artificer",
+      "Wizard"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Nick",
+    "mastery_description": "After attacking, make an extra attack with an off-hand weapon."
+  },
+  {
+    "name": "Greatsword",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Sword",
+    "damage": {
+      "dice": "2d6",
+      "damage_type": "Slashing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Heavy",
+      "Two-Handed"
+    ],
+    "weight": "6 lbs",
+    "cost": "50 gp",
+    "description": "A large sword that deals significant damage.",
+    "proficient_classes": [
+      "Fighter",
+      "Paladin",
+      "Ranger"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Cleave",
+    "mastery_description": "On hit, deal damage to a second target within reach."
+  },
+  {
+    "name": "Longsword",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Sword",
+    "damage": {
+      "dice": "1d8",
+      "damage_type": "Slashing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Versatile"
+    ],
+    "weight": "3 lbs",
+    "cost": "15 gp",
+    "description": "A versatile weapon favored by many warriors.",
+    "proficient_classes": [
+      "Fighter",
+      "Paladin",
+      "Ranger"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Flex",
+    "mastery_description": "Can be used one-handed or two-handed for extra damage."
+  },
+  {
+    "name": "Shortbow",
+    "type": "Simple",
+    "category": "Weapon",
+    "weapon_type": "Bow",
+    "damage": {
+      "dice": "1d6",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "80 feet",
+      "long": "320 feet"
+    },
+    "properties": [
+      "Ammunition",
+      "Two-Handed"
+    ],
+    "weight": "2 lbs",
+    "cost": "25 gp",
+    "description": "A bow that is easy to handle and effective at short ranges.",
+    "proficient_classes": [
+      "Ranger",
+      "Rogue"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Vex",
+    "mastery_description": "First hit on a turn grants advantage on next attack against same target."
+  },
+  {
+    "name": "Quarterstaff",
+    "type": "Simple",
+    "category": "Weapon",
+    "weapon_type": "Staff",
+    "damage": {
+      "dice": "1d6",
+      "damage_type": "Bludgeoning"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Versatile"
+    ],
+    "weight": "4 lbs",
+    "cost": "2 gp",
+    "description": "A sturdy staff used for both combat and support.",
+    "proficient_classes": [
+      "Cleric",
+      "Druid",
+      "Monk",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Flex",
+    "mastery_description": "Can be used one-handed or two-handed for extra damage."
+  },
+  {
+    "name": "Rapier",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Sword",
+    "damage": {
+      "dice": "1d8",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Finesse"
+    ],
+    "weight": "2 lbs",
+    "cost": "25 gp",
+    "description": "A slender, sharply pointed sword favored by duelists.",
+    "proficient_classes": [
+      "Fighter",
+      "Rogue"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Vex",
+    "mastery_description": "First hit on a turn grants advantage on next attack against same target."
+  },
+  {
+    "name": "Scimitar",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Sword",
+    "damage": {
+      "dice": "1d6",
+      "damage_type": "Slashing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Finesse",
+      "Light"
+    ],
+    "weight": "3 lbs",
+    "cost": "25 gp",
+    "description": "A curved sword that is light and easy to handle.",
+    "proficient_classes": [
+      "Fighter",
+      "Rogue"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Nick",
+    "mastery_description": "After attacking, make an extra attack with an off-hand weapon."
+  },
+  {
+    "name": "Shortsword",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Sword",
+    "damage": {
+      "dice": "1d6",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Finesse",
+      "Light"
+    ],
+    "weight": "2 lbs",
+    "cost": "10 gp",
+    "description": "A light and easily concealed weapon favored by rogues.",
+    "proficient_classes": [
+      "Fighter",
+      "Rogue"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Vex",
+    "mastery_description": "First hit on a turn grants advantage on next attack against same target."
+  },
+  {
+    "name": "Spear",
+    "type": "Simple",
+    "category": "Weapon",
+    "weapon_type": "Polearm",
+    "damage": {
+      "dice": "1d6",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": "20 feet"
+    },
+    "properties": [
+      "Thrown",
+      "Versatile"
+    ],
+    "weight": "3 lbs",
+    "cost": "1 gp",
+    "description": "A simple weapon that can be used for both melee and ranged attacks.",
+    "proficient_classes": [
+      "Cleric",
+      "Fighter",
+      "Paladin",
+      "Ranger"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Flex",
+    "mastery_description": "Can be used one-handed or two-handed for extra damage."
+  },
+  {
+    "name": "Trident",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Spear",
+    "damage": {
+      "dice": "1d6",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": "20 feet"
+    },
+    "properties": [
+      "Thrown",
+      "Versatile"
+    ],
+    "weight": "4 lbs",
+    "cost": "5 gp",
+    "description": "A three-pronged spear used for both melee and ranged combat.",
+    "proficient_classes": [
+      "Cleric",
+      "Fighter",
+      "Paladin",
+      "Ranger"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Flex",
+    "mastery_description": "Can be used one-handed or two-handed for extra damage."
+  },
+  {
+    "name": "Warhammer",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Hammer",
+    "damage": {
+      "dice": "1d8",
+      "damage_type": "Bludgeoning"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Versatile"
+    ],
+    "weight": "2 lbs",
+    "cost": "15 gp",
+    "description": "A sturdy hammer used for both combat and construction.",
+    "proficient_classes": [
+      "Cleric",
+      "Fighter",
+      "Paladin"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Flex",
+    "mastery_description": "Can be used one-handed or two-handed for extra damage."
+  },
+  {
+    "name": "Whip",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Whip",
+    "damage": {
+      "dice": "1d4",
+      "damage_type": "Slashing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Finesse",
+      "Reach"
+    ],
+    "weight": "3 lbs",
+    "cost": "2 gp",
+    "description": "A flexible weapon that can be used to strike foes from a distance.",
+    "proficient_classes": [
+      "Rogue",
+      "Monk"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Vex",
+    "mastery_description": "First hit on a turn grants advantage on next attack against same target."
+  },
+  {
+    "name": "Crossbow, Heavy",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Crossbow",
+    "damage": {
+      "dice": "1d10",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "100 feet",
+      "long": "400 feet"
+    },
+    "properties": [
+      "Ammunition",
+      "Heavy",
+      "Loading",
+      "Two-Handed"
+    ],
+    "weight": "18 lbs",
+    "cost": "50 gp",
+    "description": "A large crossbow that requires two hands to use but deals significant damage.",
+    "proficient_classes": [
+      "Fighter",
+      "Ranger"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Slow",
+    "mastery_description": "On hit, reduce target\u2019s speed until next turn."
+  },
+  {
+    "name": "Crossbow, Hand",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Crossbow",
+    "damage": {
+      "dice": "1d6",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "30 feet",
+      "long": "120 feet"
+    },
+    "properties": [
+      "Ammunition",
+      "Light",
+      "Loading"
+    ],
+    "weight": "3 lbs",
+    "cost": "75 gp",
+    "description": "A compact crossbow that can be easily wielded with one hand.",
+    "proficient_classes": [
+      "Fighter",
+      "Rogue"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Vex",
+    "mastery_description": "First hit on a turn grants advantage on next attack against same target."
+  },
+  {
+    "name": "Halberd",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Polearm",
+    "damage": {
+      "dice": "1d10",
+      "damage_type": "Slashing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Heavy",
+      "Reach",
+      "Two-Handed"
+    ],
+    "weight": "6 lbs",
+    "cost": "20 gp",
+    "description": "A versatile polearm that can be used for both slashing and thrusting attacks.",
+    "proficient_classes": [
+      "Fighter",
+      "Paladin",
+      "Ranger"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Cleave",
+    "mastery_description": "On hit, deal damage to a second target within reach."
+  },
+  {
+    "name": "Longbow",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Bow",
+    "damage": {
+      "dice": "1d8",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "150 feet",
+      "long": "600 feet"
+    },
+    "properties": [
+      "Ammunition",
+      "Heavy",
+      "Two-Handed"
+    ],
+    "weight": "2 lbs",
+    "cost": "50 gp",
+    "description": "A powerful bow capable of delivering arrows with great force over long distances.",
+    "proficient_classes": [
+      "Ranger",
+      "Fighter"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Vex",
+    "mastery_description": "First hit on a turn grants advantage on next attack against same target."
+  },
+  {
+    "name": "Net",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Net",
+    "damage": {
+      "dice": "0",
+      "damage_type": "None"
+    },
+    "range": {
+      "normal": "5 feet",
+      "long": "15 feet"
+    },
+    "properties": [
+      "Thrown",
+      "Special"
+    ],
+    "weight": "3 lbs",
+    "cost": "1 gp",
+    "description": "A large net that can entangle creatures, restricting their movement.",
+    "proficient_classes": [
+      "Ranger",
+      "Fighter"
+    ],
+    "special_effects": [
+      "Restrains target on a hit. Target can use Strength to escape on their turn."
+    ],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "TBD",
+    "mastery_description": "To be determined"
+  },
+  {
+    "name": "Sling",
+    "type": "Simple",
+    "category": "Weapon",
+    "weapon_type": "Sling",
+    "damage": {
+      "dice": "1d4",
+      "damage_type": "Bludgeoning"
+    },
+    "range": {
+      "normal": "30 feet",
+      "long": "120 feet"
+    },
+    "properties": [
+      "Ammunition",
+      "Thrown"
+    ],
+    "weight": "0.5 lbs",
+    "cost": "1 gp",
+    "description": "A simple weapon for throwing small stones or bullets with surprising accuracy.",
+    "proficient_classes": [
+      "Cleric",
+      "Ranger"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Vex",
+    "mastery_description": "First hit on a turn grants advantage on next attack against same target."
+  },
+  {
+    "name": "Trident",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Spear",
+    "damage": {
+      "dice": "1d6",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": "20 feet"
+    },
+    "properties": [
+      "Thrown",
+      "Versatile"
+    ],
+    "weight": "4 lbs",
+    "cost": "5 gp",
+    "description": "A three-pronged spear used for both melee and ranged combat.",
+    "proficient_classes": [
+      "Cleric",
+      "Fighter",
+      "Paladin",
+      "Ranger"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Flex",
+    "mastery_description": "Can be used one-handed or two-handed for extra damage."
+  },
+  {
+    "name": "War Pick",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Polearm",
+    "damage": {
+      "dice": "1d8",
+      "damage_type": "Piercing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Heavy",
+      "Reach",
+      "Two-Handed"
+    ],
+    "weight": "4 lbs",
+    "cost": "5 gp",
+    "description": "A spike-laden weapon designed to pierce armor and shields.",
+    "proficient_classes": [
+      "Fighter",
+      "Paladin"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "TBD",
+    "mastery_description": "To be determined"
+  },
+  {
+    "name": "Warhammer",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Hammer",
+    "damage": {
+      "dice": "1d8",
+      "damage_type": "Bludgeoning"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Versatile"
+    ],
+    "weight": "2 lbs",
+    "cost": "15 gp",
+    "description": "A sturdy hammer used for both combat and construction.",
+    "proficient_classes": [
+      "Cleric",
+      "Fighter",
+      "Paladin"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Flex",
+    "mastery_description": "Can be used one-handed or two-handed for extra damage."
+  },
+  {
+    "name": "Whip",
+    "type": "Martial",
+    "category": "Weapon",
+    "weapon_type": "Whip",
+    "damage": {
+      "dice": "1d4",
+      "damage_type": "Slashing"
+    },
+    "range": {
+      "normal": "Melee",
+      "long": null
+    },
+    "properties": [
+      "Finesse",
+      "Reach"
+    ],
+    "weight": "3 lbs",
+    "cost": "2 gp",
+    "description": "A flexible weapon that can be used to strike foes from a distance.",
+    "proficient_classes": [
+      "Rogue",
+      "Monk"
+    ],
+    "special_effects": [],
+    "damage_bonus": null,
+    "critical_range": null,
+    "source": "Player's Handbook",
+    "images": [],
+    "mastery": "Vex",
+    "mastery_description": "First hit on a turn grants advantage on next attack against same target."
+  }
+]
